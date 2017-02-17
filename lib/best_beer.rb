@@ -8,7 +8,10 @@ require_relative "beer.rb"
 require_relative "brewery.rb"
 require_relative "beer_scraper.rb"
 
-
+  def start_app
+    BeerScraper.create_beers
+    show_menu
+  end
 
 
   def show_menu

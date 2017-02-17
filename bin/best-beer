@@ -2,10 +2,6 @@
 
 require_relative '../lib/best_beer.rb'
 
-def start
-  BeerScraper.create_beers
-end
-
 def menu
   show_menu
   input = gets.strip
@@ -105,5 +101,4 @@ def menu
   end
 end
 
-start
-menu
+start_app
