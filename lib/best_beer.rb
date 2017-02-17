@@ -6,9 +6,7 @@ require 'nokogiri'
 
 require_relative "beer.rb"
 require_relative "brewery.rb"
-
-module BestBeer
-  #the organizational methods will go in here.
+require_relative "beer_scraper.rb"
 
   def show_menu
     puts "What would you like to view?"
@@ -67,4 +65,3 @@ module BestBeer
     puts "#{beer.rating}. #{beer.name} - #{beer.brewery.name} - #{beer.type} - #{beer.abv}"
     puts "Options: 'menu', 'exit'"
   end
-end

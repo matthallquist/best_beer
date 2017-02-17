@@ -2,7 +2,6 @@
 
 require_relative '../lib/best_beer.rb'
 
-#"interactive" stuff goes in here.
 def start
   Beer.create_beers
 end
