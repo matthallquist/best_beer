@@ -3,8 +3,7 @@
 require_relative '../lib/best_beer.rb'
 
 def start
-  scraped_beer_info = BeerScraper.scrape_beers
-  Beer.create_beers(scraped_beer_info)
+  BeerScraper.create_beers
 end
 
 def menu

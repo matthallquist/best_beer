@@ -20,12 +20,4 @@ class Beer
     self.class.all << self
   end
 
-  def self.create_beers(scraped_beer_info)
-    scraped_beer_info.each do |stats|
-      new_brewery = Brewery.find_or_create(stats[2])
-      new_beer = Beer.new(stats[0],stats[1],new_brewery,stats[3],stats[4])
-      new_beer.brewery.beers << [new_beer]
-    end
-  end
-
 end
