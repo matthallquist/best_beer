@@ -101,4 +101,4 @@ def menu
   end
 end
 
-start_app
+start
