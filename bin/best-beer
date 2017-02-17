@@ -1,0 +1,110 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/best_beer.rb'
+
+#"interactive" stuff goes in here.
+def start
+  Beer.create_beers
+end
+
+def menu
+  show_menu
+  input = gets.strip
+  if input == "1"
+    top_beers
+    input = gets.strip
+    if input == "menu"
+      menu
+    elsif input == "exit"
+      say_goodbye
+    elsif input.to_i.between?(1,250)
+      more_beer_info(input)
+      input = gets.strip
+      if input == "menu"
+        menu
+      elsif input == "exit"
+        say_goodbye
+      else
+        puts "Sorry, didn't catch that!"
+        menu
+      end
+    else
+      puts "Sorry, didn't catch that!"
+      menu
+    end
+  elsif input == "2"
+    top_25_beers
+    input = gets.strip
+    if input == "menu"
+      menu
+    elsif input == "exit"
+      say_goodbye
+    elsif input.to_i.between?(1,250)
+      more_beer_info(input)
+      input = gets.strip
+      if input == "menu"
+        menu
+      elsif input == "exit"
+        say_goodbye
+      else
+        puts "Sorry, didn't catch that!"
+        menu
+      end
+    else
+      puts "Sorry, didn't catch that!"
+      menu
+    end
+  elsif input == "3"
+    top_50_beers
+    input = gets.strip
+    if input == "menu"
+      menu
+    elsif input == "exit"
+      say_goodbye
+    elsif input.to_i.between?(1,250)
+      more_beer_info(input)
+      input = gets.strip
+      if input == "menu"
+        menu
+      elsif input == "exit"
+        say_goodbye
+      else
+        puts "Sorry, didn't catch that!"
+        menu
+      end
+    else
+      puts "Sorry, didn't catch that!"
+      menu
+    end
+  elsif input == "4"
+    top_100_beers
+    input = gets.strip
+    if input == "menu"
+      menu
+    elsif input == "exit"
+      say_goodbye
+    elsif input.to_i.between?(1,250)
+      more_beer_info(input)
+      input = gets.strip
+      if input == "menu"
+        menu
+      elsif input == "exit"
+        say_goodbye
+      else
+        puts "Sorry, didn't catch that!"
+        menu
+      end
+    else
+      puts "Sorry, didn't catch that!"
+      menu
+    end
+  elsif input == "5"
+    say_goodbye
+  else
+    puts "Sorry, didn't catch that!"
+    menu
+  end
+end
+
+start
+menu
