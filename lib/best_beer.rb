@@ -8,6 +8,9 @@ require_relative "beer.rb"
 require_relative "brewery.rb"
 require_relative "beer_scraper.rb"
 
+
+
+
   def show_menu
     puts "What would you like to view?"
     puts "MENU:"
